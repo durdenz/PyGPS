@@ -10,3 +10,7 @@ To start gpsd server use:
 Run the library_gps script:
 `python3 library_gps.py`
 
+Find /dev port for GPS using:
+`ls -l /dev/serial/by-id`
+
+
