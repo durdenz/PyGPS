@@ -13,4 +13,18 @@ Run the library_gps script:
 Find /dev port for GPS using:
 `ls -l /dev/serial/by-id`
 
+Example: /dev/ttyACM0
 
+To view the data stream from the USB port:
+Use screen command.
+Install screen:
+`sudo apt install screen`
+
+Connect Screen to device:
+`screen /dev/ttyACM0 9600`
+
+To Exit Screen:
+`CTRL+a k`
+
+# References:
+Screen: https://www.cyberciti.biz/tips/linux-screen-command-howto.html
