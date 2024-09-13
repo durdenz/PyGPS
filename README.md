@@ -4,10 +4,16 @@ sudo apt-get install gpsd gpsd-clients
 ```
 Use `from gps import *` in your python script to access gps functions
 
-To start gpsd server use:
+Setup gpsd server:
+`sudo systemctl stop gpsd.socket`
 `sudo gpsd /dev/ttyACM0 -F /var/run/gpsd.sock`
 
-Run the library_gps script:
+Check GPS Data:
+`sudo gpsmon`
+or
+`sudo cgps -s`
+
+Run the library_gps script (to get data via serial):
 `python3 library_gps.py`
 
 Find /dev port for GPS using:
@@ -28,3 +34,5 @@ To Exit Screen:
 
 # References:
 Screen: https://www.cyberciti.biz/tips/linux-screen-command-howto.html
+https://maker.pro/raspberry-pi/tutorial/how-to-use-a-gps-receiver-with-raspberry-pi-4
+https://maker.pro/raspberry-pi/tutorial/how-to-read-gps-data-with-python-on-a-raspberry-pi
